@@ -1,0 +1,16 @@
+{
+    "name": "TreasuryDirect Login Fix",
+    "description": "Removes the virtual keyboard and allows normal keyboard input on TreasuryDirect.gov's password page.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["scripting"],
+    "content_scripts" :[
+        {
+            "matches": ["https://www.treasurydirect.gov/RS/PW-Display.do"],
+            "js": ["content-script.js"]
+        }
+    ],
+    "host_permissions": [
+      "https://www.treasurydirect.gov/"
+    ]
+}
